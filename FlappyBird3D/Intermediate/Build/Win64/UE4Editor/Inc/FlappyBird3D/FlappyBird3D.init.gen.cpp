@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeFlappyBird3D_init() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/FlappyBird3D")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x7C58F893;
-			Guid.B = 0x43C5BB60;
+			Guid.A = 0xF31B8E10;
+			Guid.B = 0xE383C647;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

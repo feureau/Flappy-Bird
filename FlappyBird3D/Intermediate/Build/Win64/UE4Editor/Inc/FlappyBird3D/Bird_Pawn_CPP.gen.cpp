@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeBird_Pawn_CPP() {}
 	FLAPPYBIRD3D_API UClass* Z_Construct_UClass_ABird_Pawn_CPP();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	FLAPPYBIRD3D_API UFunction* Z_Construct_UFunction_ABird_Pawn_CPP_GetInterpolationSpeed();
+	FLAPPYBIRD3D_API UFunction* Z_Construct_UFunction_ABird_Pawn_CPP_GetRotationInterpolationTarget();
 	FLAPPYBIRD3D_API UFunction* Z_Construct_UFunction_ABird_Pawn_CPP_IsItFalling();
 	FLAPPYBIRD3D_API UClass* Z_Construct_UClass_ABird_Pawn_CPP_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
@@ -28,6 +30,8 @@ void EmptyLinkFunctionForGeneratedCodeBird_Pawn_CPP() {}
 		UClass* Class = ABird_Pawn_CPP::StaticClass();
 		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
 			{ "CalculateOrientationDependingOnVerticalMovement", (Native)&ABird_Pawn_CPP::execCalculateOrientationDependingOnVerticalMovement },
+			{ "GetInterpolationSpeed", (Native)&ABird_Pawn_CPP::execGetInterpolationSpeed },
+			{ "GetRotationInterpolationTarget", (Native)&ABird_Pawn_CPP::execGetRotationInterpolationTarget },
 			{ "IsItFalling", (Native)&ABird_Pawn_CPP::execIsItFalling },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, ARRAY_COUNT(AnsiFuncs));
@@ -46,6 +50,54 @@ void EmptyLinkFunctionForGeneratedCodeBird_Pawn_CPP() {}
 			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("CalculateOrientationDependingOnVerticalMovement"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), nullptr, (EFunctionFlags)0x04820401, 65535, sizeof(Bird_Pawn_CPP_eventCalculateOrientationDependingOnVerticalMovement_Parms));
 			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(ReturnValue, Bird_Pawn_CPP_eventCalculateOrientationDependingOnVerticalMovement_Parms), 0x0010000000000580, Z_Construct_UScriptStruct_FRotator());
 			UProperty* NewProp_currentVelocity = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("currentVelocity"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(currentVelocity, Bird_Pawn_CPP_eventCalculateOrientationDependingOnVerticalMovement_Parms), 0x0010000000000080, Z_Construct_UScriptStruct_FVector());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Bird_Pawn_CPP"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Bird_Pawn_CPP.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ABird_Pawn_CPP_GetInterpolationSpeed()
+	{
+		struct Bird_Pawn_CPP_eventGetInterpolationSpeed_Parms
+		{
+			FVector currentVelocity;
+			float ReturnValue;
+		};
+		UObject* Outer = Z_Construct_UClass_ABird_Pawn_CPP();
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetInterpolationSpeed"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), nullptr, (EFunctionFlags)0x14820401, 65535, sizeof(Bird_Pawn_CPP_eventGetInterpolationSpeed_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, Bird_Pawn_CPP_eventGetInterpolationSpeed_Parms), 0x0010000000000580);
+			UProperty* NewProp_currentVelocity = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("currentVelocity"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(currentVelocity, Bird_Pawn_CPP_eventGetInterpolationSpeed_Parms), 0x0010000000000080, Z_Construct_UScriptStruct_FVector());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Bird_Pawn_CPP"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Bird_Pawn_CPP.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ABird_Pawn_CPP_GetRotationInterpolationTarget()
+	{
+		struct Bird_Pawn_CPP_eventGetRotationInterpolationTarget_Parms
+		{
+			FVector currentVelocity;
+			FRotator ReturnValue;
+		};
+		UObject* Outer = Z_Construct_UClass_ABird_Pawn_CPP();
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetRotationInterpolationTarget"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), nullptr, (EFunctionFlags)0x14820401, 65535, sizeof(Bird_Pawn_CPP_eventGetRotationInterpolationTarget_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(ReturnValue, Bird_Pawn_CPP_eventGetRotationInterpolationTarget_Parms), 0x0010000000000580, Z_Construct_UScriptStruct_FRotator());
+			UProperty* NewProp_currentVelocity = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("currentVelocity"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(currentVelocity, Bird_Pawn_CPP_eventGetRotationInterpolationTarget_Parms), 0x0010000000000080, Z_Construct_UScriptStruct_FVector());
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -99,9 +151,13 @@ void EmptyLinkFunctionForGeneratedCodeBird_Pawn_CPP() {}
 				OuterClass->ClassFlags |= (EClassFlags)0x20900080u;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ABird_Pawn_CPP_CalculateOrientationDependingOnVerticalMovement());
+				OuterClass->LinkChild(Z_Construct_UFunction_ABird_Pawn_CPP_GetInterpolationSpeed());
+				OuterClass->LinkChild(Z_Construct_UFunction_ABird_Pawn_CPP_GetRotationInterpolationTarget());
 				OuterClass->LinkChild(Z_Construct_UFunction_ABird_Pawn_CPP_IsItFalling());
 
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABird_Pawn_CPP_CalculateOrientationDependingOnVerticalMovement(), "CalculateOrientationDependingOnVerticalMovement"); // 3410768457
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABird_Pawn_CPP_GetInterpolationSpeed(), "GetInterpolationSpeed"); // 962728449
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABird_Pawn_CPP_GetRotationInterpolationTarget(), "GetRotationInterpolationTarget"); // 4086988095
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ABird_Pawn_CPP_IsItFalling(), "IsItFalling"); // 2154463569
 				static TCppClassTypeInfo<TCppClassTypeTraits<ABird_Pawn_CPP> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
@@ -117,7 +173,7 @@ void EmptyLinkFunctionForGeneratedCodeBird_Pawn_CPP() {}
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABird_Pawn_CPP, 4157728472);
+	IMPLEMENT_CLASS(ABird_Pawn_CPP, 2027865495);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABird_Pawn_CPP(Z_Construct_UClass_ABird_Pawn_CPP, &ABird_Pawn_CPP::StaticClass, TEXT("/Script/FlappyBird3D"), TEXT("ABird_Pawn_CPP"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABird_Pawn_CPP);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
