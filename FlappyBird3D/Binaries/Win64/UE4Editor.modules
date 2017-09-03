@@ -4,6 +4,10 @@
 	"BuildId" : "a85275cd-d363-4594-bbcc-177600e839e0",
 	"Modules" : 
 	{
+<<<<<<< HEAD
 		"FlappyBird3D" : "UE4Editor-FlappyBird3D-4068.dll"
+=======
+		"FlappyBird3D" : "UE4Editor-FlappyBird3D-9892.dll"
+>>>>>>> parent of 4126151... Moved InterpTo interp speed to CPP. Add isdead variable
 	}
 }

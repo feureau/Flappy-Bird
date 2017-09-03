@@ -28,6 +28,4 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Bird_Pawn_CPP") FRotator CalculateOrientationDependingOnVerticalMovement(FVector currentVelocity);
 	UFUNCTION(BlueprintPure, Category = "Bird_Pawn_CPP") bool IsItFalling(FVector currentVelocity);
-	UFUNCTION(BlueprintPure, Category = "Bird_Pawn_CPP") FRotator GetRotationInterpolationTarget(FVector currentVelocity);
-	UFUNCTION(BlueprintPure, Category = "Bird_Pawn_CPP") float GetInterpolationSpeed(FVector currentVelocity);
 };

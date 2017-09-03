@@ -17,24 +17,6 @@ struct FRotator;
 
 #define FlappyBird3D_Source_FlappyBird3D_Bird_Pawn_CPP_h_12_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetInterpolationSpeed) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_currentVelocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=this->GetInterpolationSpeed(Z_Param_currentVelocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetRotationInterpolationTarget) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_currentVelocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=this->GetRotationInterpolationTarget(Z_Param_currentVelocity); \
-		P_NATIVE_END; \
-	} \
- \
 	DECLARE_FUNCTION(execIsItFalling) \
 	{ \
 		P_GET_STRUCT(FVector,Z_Param_currentVelocity); \
@@ -55,24 +37,6 @@ struct FRotator;
 
 
 #define FlappyBird3D_Source_FlappyBird3D_Bird_Pawn_CPP_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execGetInterpolationSpeed) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_currentVelocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=this->GetInterpolationSpeed(Z_Param_currentVelocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetRotationInterpolationTarget) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_currentVelocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=this->GetRotationInterpolationTarget(Z_Param_currentVelocity); \
-		P_NATIVE_END; \
-	} \
  \
 	DECLARE_FUNCTION(execIsItFalling) \
 	{ \
