@@ -1,3 +1,0 @@
-D:\Github\Flappy-Bird\FlappyBird3D\Source\FlappyBird3D\FlappyBird3D.Build.cs
-D:\Github\Flappy-Bird\FlappyBird3D\Source\FlappyBird3D.Target.cs
-D:\Github\Flappy-Bird\FlappyBird3D\Source\FlappyBird3DEditor.Target.cs
