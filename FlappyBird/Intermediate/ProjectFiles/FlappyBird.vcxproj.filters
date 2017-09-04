@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\FlappyBird.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{EDA8C848-E3E6-4908-BE68-32F8B8BEF9BE}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FlappyBird.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\FlappyBirdEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{477290AC-7E3D-4ADC-8880-E12D19077628}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\FlappyBird">
+			<UniqueIdentifier>{7383AA58-E9DF-4E3D-A6F2-EFEEB8E09D72}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FlappyBird\FlappyBird.Build.cs">
+			<Filter>Source\FlappyBird</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\FlappyBird\FlappyBird.cpp">
+			<Filter>Source\FlappyBird</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FlappyBird\FlappyBird.h">
+			<Filter>Source\FlappyBird</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\FlappyBird\FlappyBirdGameModeBase.cpp">
+			<Filter>Source\FlappyBird</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FlappyBird\FlappyBirdGameModeBase.h">
+			<Filter>Source\FlappyBird</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\FlappyBird\FlappyBird_CPP.cpp">
+			<Filter>Source\FlappyBird</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FlappyBird\FlappyBird_CPP.h">
+			<Filter>Source\FlappyBird</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
