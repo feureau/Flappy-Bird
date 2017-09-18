@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Pipes.ma
-//Last modified: Fri, Sep 15, 2017 11:23:45 PM
+//Last modified: Fri, Sep 15, 2017 11:00:57 PM
 //Codeset: 1252
 requires maya "2017ff04";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 createNode transform -s -n "persp";
 	rename -uid "7B46D130-4A9B-04DC-FF44-9083BD24CE5D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.344311770464918 17.718160138958659 7.8145726201066923 ;
-	setAttr ".r" -type "double3" -56.738352787933572 -294.19998609144898 0 ;
+	setAttr ".t" -type "double3" 27.688269871966657 1.9671420723007849 12.211974054758647 ;
+	setAttr ".r" -type "double3" -21.338352787935037 -293.7999860914515 7.8815310427884536e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3E471222-45BD-1256-2781-BC9430D86BFD";
 	setAttr -k off ".v" no;
@@ -482,9 +482,9 @@ createNode mesh -n "PipesShape" -p "Pipes";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Pipe_DarkInsides" -p "geo";
+createNode transform -n "pCylinder1" -p "geo";
 	rename -uid "F0C48CAB-49C9-681A-9B3C-908EBFD8C726";
-createNode mesh -n "Pipe_DarkInsidesShape" -p "Pipe_DarkInsides";
+createNode mesh -n "pCylinder1Shape" -p "pCylinder1";
 	rename -uid "54DAFF23-4800-2BF6-FEB2-8C8A775314EA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -664,7 +664,7 @@ relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Pipe_DarkInsides_material.oc" "lambert2SG.ss";
-connectAttr "Pipe_DarkInsidesShape.iog" "lambert2SG.dsm" -na;
+connectAttr "pCylinder1Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "Pipe_DarkInsides_material.msg" "materialInfo1.m";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
