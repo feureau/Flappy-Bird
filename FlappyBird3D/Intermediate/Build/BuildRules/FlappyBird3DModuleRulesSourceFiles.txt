@@ -1,0 +1,2 @@
+D:\Github\Flappy-Bird\FlappyBird3D\Intermediate\Plugins\Android_ETC1\NativizedAssets\Source\NativizedAssets\NativizedAssets.Build.cs
+D:\Github\Flappy-Bird\FlappyBird3D\Intermediate\Source\FlappyBird3D.Target.cs
